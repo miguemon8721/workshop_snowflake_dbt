@@ -1,0 +1,152 @@
+version: 2
+
+sources:
+  - name: tpch
+    database: DEV_BRONZE_DB
+    schema: TPCH    
+    tables:
+      - name: customer
+        columns:
+          - name: c_custkey
+            data_type: number
+          - name: c_name
+            data_type: varchar
+          - name: c_address
+            data_type: varchar
+          - name: c_nationkey
+            data_type: number
+          - name: c_phone
+            data_type: varchar
+          - name: c_acctbal
+            data_type: number
+          - name: c_mktsegment
+            data_type: varchar
+          - name: c_comment
+            data_type: varchar
+
+      - name: lineitem
+        columns:
+          - name: l_orderkey
+            data_type: number
+          - name: l_partkey
+            data_type: number
+          - name: l_suppkey
+            data_type: number
+          - name: l_linenumber
+            data_type: number
+          - name: l_quantity
+            data_type: number
+          - name: l_extendedprice
+            data_type: number
+          - name: l_discount
+            data_type: number
+          - name: l_tax
+            data_type: number
+          - name: l_returnflag
+            data_type: varchar
+          - name: l_linestatus
+            data_type: varchar
+          - name: l_shipdate
+            data_type: date
+          - name: l_commitdate
+            data_type: date
+          - name: l_receiptdate
+            data_type: date
+          - name: l_shipinstruct
+            data_type: varchar
+          - name: l_shipmode
+            data_type: varchar
+          - name: l_comment
+            data_type: varchar
+
+      - name: nation
+        columns:
+          - name: n_nationkey
+            data_type: number
+          - name: n_name
+            data_type: varchar
+          - name: n_regionkey
+            data_type: number
+          - name: n_comment
+            data_type: varchar
+
+      - name: orders
+        columns:
+          - name: o_orderkey
+            data_type: number
+          - name: o_custkey
+            data_type: number
+          - name: o_orderstatus
+            data_type: varchar
+          - name: o_totalprice
+            data_type: number
+          - name: o_orderdate
+            data_type: date
+          - name: o_orderpriority
+            data_type: varchar
+          - name: o_clerk
+            data_type: varchar
+          - name: o_shippriority
+            data_type: number
+          - name: o_comment
+            data_type: varchar
+
+      - name: part
+        columns:
+          - name: p_partkey
+            data_type: number
+          - name: p_name
+            data_type: varchar
+          - name: p_mfgr
+            data_type: varchar
+          - name: p_brand
+            data_type: varchar
+          - name: p_type
+            data_type: varchar
+          - name: p_size
+            data_type: number
+          - name: p_container
+            data_type: varchar
+          - name: p_retailprice
+            data_type: number
+          - name: p_comment
+            data_type: varchar
+
+      - name: partsupp
+        columns:
+          - name: ps_partkey
+            data_type: number
+          - name: ps_suppkey
+            data_type: number
+          - name: ps_availqty
+            data_type: number
+          - name: ps_supplycost
+            data_type: number
+          - name: ps_comment
+            data_type: varchar
+
+      - name: region
+        columns:
+          - name: r_regionkey
+            data_type: number
+          - name: r_name
+            data_type: varchar
+          - name: r_comment
+            data_type: varchar
+
+      - name: supplier
+        columns:
+          - name: s_suppkey
+            data_type: number
+          - name: s_name
+            data_type: varchar
+          - name: s_address
+            data_type: varchar
+          - name: s_nationkey
+            data_type: number
+          - name: s_phone
+            data_type: varchar
+          - name: s_acctbal
+            data_type: number
+          - name: s_comment
+            data_type: varchar
